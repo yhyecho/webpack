@@ -4,7 +4,7 @@ class App extends Component {
   render() {
     return(
       <div>
-        App run webpack --watch
+        App run webpack-dev-server i know
       </div>
     )
   }

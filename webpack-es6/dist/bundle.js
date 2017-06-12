@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -73,27 +73,46 @@
 "use strict";
 
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var i = 1;
+var j = 2;
+var k = 3;
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+exports.j = j;
+exports.k = k; // 命名导出
 
-var Bar = function () {
-  function Bar() {
-    _classCallCheck(this, Bar);
-  }
+exports.default = i; // 默认导出
 
-  _createClass(Bar, [{
-    key: 'doStuff',
-    value: function doStuff() {
-      console.log('stuff');
-    }
-  }]);
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
 
-  return Bar;
-}();
+"use strict";
 
-var b = new Bar();
-b.doStuff();
+
+var _const = __webpack_require__(0);
+
+var _const2 = _interopRequireDefault(_const);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// 命名导入
+
+// class Bar {
+//   doStuff() {
+//     console.log('stuff');
+//   }
+// }
+//
+// var b = new Bar();
+// b.doStuff();
+
+console.log(_const2.default); // 默认导入
+
+console.log(_const.j);
+console.log(_const.k);
 
 /***/ })
 /******/ ]);

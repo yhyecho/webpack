@@ -68,7 +68,10 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 // shim for using process in browser
 var process = module.exports = {};
@@ -9580,7 +9583,7 @@ var App = function (_Component) {
       return _react2.default.createElement(
         'div',
         null,
-        'App'
+        'App run webpack --watch'
       );
     }
   }]);
